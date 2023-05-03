@@ -1,4 +1,4 @@
-# WeatherZen Front End Application
+# Personal Portfolio Front End Application
 
 ## Installation
 
