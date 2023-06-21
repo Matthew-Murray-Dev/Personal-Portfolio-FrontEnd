@@ -101,7 +101,7 @@ function FurtherCandidateAssessment() {
             <Button
               className="btn mr-2"
               variant="contained"
-              value="Send_element"
+              id="send_element"
               style={{ backgroundColor: "#737373" }}
             >
               Send Event
