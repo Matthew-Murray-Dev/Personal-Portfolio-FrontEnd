@@ -30,14 +30,15 @@ function FurtherCandidateAssessment() {
         message: "Please enter a valid email address",
       });
     }
-    let phoneValidation=formData.phone.replace(/[^0-9]/g, '');
-    if (phoneValidation.length!==10) {
+    let phoneValidation = formData.phone.replace(/[^0-9]/g, "");
+    if (phoneValidation.length !== 10) {
       formEntryErrors.push({
         id: 2,
         message: "Please enter a valid phone number",
       });
-    } else{formData.phone=phoneValidation}
-    
+    } else {
+      formData.phone = phoneValidation;
+    }
 
     if (formEntryErrors.length) {
       setError(formEntryErrors);
@@ -90,8 +91,7 @@ function FurtherCandidateAssessment() {
                 event should be sent into Google Tag Manager. Configure Google
                 Tag Manager to send the trigger into Google Analytics. Create
                 and configure a goal in Google Analytics so you can display said
-                event as a converstion. Use{" "}
-                <a href="https://loom.com">loom.com</a> to take a video of the
+                event as a conversion. Use <a href="https://loom.com">loom.com</a> to take a video of the
                 process from end to end with the converstion showing up in
                 Google Analytics
               </p>
@@ -183,6 +183,15 @@ function FurtherCandidateAssessment() {
                 <small className="form-text text-muted">
                   Enter valid 10 digit Phone Number.
                 </small>
+              </div>
+              <div className="row form-group">
+                <button
+                  style={{ rightMargin: "500px" }}
+                  type="submit"
+                  className="btn btn-primary"
+                >
+                  Submit
+                </button>
               </div>
             </form>
           </div>
