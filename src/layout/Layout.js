@@ -1,9 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import NotFound from "./NotFound";
-import Menu from "./Menu";
 import { Route, Switch } from "react-router-dom";
-
+import ProjectDisambiguationPage from "../Projects/ProjectDisambiguationPage";
 import TitanDef from "../TitanDef/TitanDef";
 import TitanDefCreate from "../TitanDef/TitanDefCreate";
 import Home from "../home/Home";
@@ -12,9 +11,9 @@ function Layout() {
   return (
     <>
       <Header />
-      <Menu />
       <div className="container">
         <Switch>
+          <Route path="/Projects"><ProjectDisambiguationPage/></Route>
         <Route path="/HW/TitanDef/new">
             <TitanDefCreate />
          </Route>

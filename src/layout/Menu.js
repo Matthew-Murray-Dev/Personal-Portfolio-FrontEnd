@@ -30,6 +30,9 @@ function Menu() {
             <li><Link className="nav-link" to="/AboutMe">
                 <span className="" /> About Me
               </Link></li>
+              <li><Link className="nav-link" to="/Projects">
+                <span className="" /> Projects
+              </Link></li>
           </ul>
           <Switch><Route exact={true} path="/HW/TitanDef"><ul className="navbar-nav">
             <li className="nav-item">
