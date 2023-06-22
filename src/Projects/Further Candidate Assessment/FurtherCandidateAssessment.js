@@ -12,14 +12,14 @@ function FurtherCandidateAssessment() {
   });
   const initialFormState = { name: "", email: "", phone: "" };
   const [formData, setFormData] = useState(initialFormState);
-  const [error, setError] = useState(null);
+ // const [error, setError] = useState(null);
 
   let showOne = updateValue.updateValueOne ? "" : "none";
   let showTwo = updateValue.updateValueTwo ? "" : "none";
   let showThree = updateValue.updateValueThree ? "" : "none";
   let showFour = updateValue.updateValueFour ? "" : "none";
 
-  function formValidation() {
+ /* function formValidation() {
     const formEntryErrors = [];
     const emailRegexp = new RegExp(
       /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i
@@ -45,9 +45,9 @@ function FurtherCandidateAssessment() {
     }
 
     return !formEntryErrors.length;
-  }
+  }*/
 
-  function submitHandler(event) {
+  /*function submitHandler(event) {
     //change to submitForm(formData)
     event.preventDefault();
     const abortController = new AbortController();
@@ -59,7 +59,7 @@ function FurtherCandidateAssessment() {
         .catch(setError);
     }
     return () => abortController.abort();
-  }
+  }*/
 
   function changeHandler({ target: { name, value } }) {
     setFormData((formData) => ({
@@ -134,7 +134,7 @@ function FurtherCandidateAssessment() {
             </div>
           </div>
           <div className="col col-5" style={{ margin: "auto" }}>
-            <form onSubmit={submitHandler} className="mb-4">
+            <form id="myForm" action="https://hooks.zapier.com/hooks/catch/15728688/3hvmdzf/" className="mb-4" type="POST">
               <div className="row form-group">
                 <label className="form-label" htmlFor="defLine">
                   Name
@@ -189,6 +189,8 @@ function FurtherCandidateAssessment() {
                 <button
                   style={{ rightMargin: "500px" }}
                   type="submit"
+                  value="submit"
+                  id="Form-submit"
                   className="btn btn-primary"
                 >
                   Submit
