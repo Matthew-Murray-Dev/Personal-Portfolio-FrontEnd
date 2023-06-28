@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ShowHideButton from "./ShowHideButton";
 
 //CA1
-function FurtherCandidateAssessment() {
+function FurtherCandidateAssessment1() {
   const [updateValue, setUpdateValue] = useState({
     updateValueOne: false,
     updateValueTwo: false,
@@ -12,54 +12,13 @@ function FurtherCandidateAssessment() {
   });
   const initialFormState = { name: "", email: "", phone: "" };
   const [formData, setFormData] = useState(initialFormState);
- // const [error, setError] = useState(null);
-
+ 
   let showOne = updateValue.updateValueOne ? "" : "none";
   let showTwo = updateValue.updateValueTwo ? "" : "none";
   let showThree = updateValue.updateValueThree ? "" : "none";
   let showFour = updateValue.updateValueFour ? "" : "none";
 
- /* function formValidation() {
-    const formEntryErrors = [];
-    const emailRegexp = new RegExp(
-      /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i
-    );
-    if (!emailRegexp.test(formData.email)) {
-      formEntryErrors.push({
-        id: 1,
-        message: "Please enter a valid email address",
-      });
-    }
-    let phoneValidation = formData.phone.replace(/[^0-9]/g, "");
-    if (phoneValidation.length !== 10) {
-      formEntryErrors.push({
-        id: 2,
-        message: "Please enter a valid phone number",
-      });
-    } else {
-      formData.phone = phoneValidation;
-    }
-
-    if (formEntryErrors.length) {
-      setError(formEntryErrors);
-    }
-
-    return !formEntryErrors.length;
-  }*/
-
-  /*function submitHandler(event) {
-    //change to submitForm(formData)
-    event.preventDefault();
-    const abortController = new AbortController();
-    if (formValidation()) {
-      setFormData(formData)
-        .then(() => {
-          setFormData(initialFormState);
-        })
-        .catch(setError);
-    }
-    return () => abortController.abort();
-  }*/
+ 
 
   function changeHandler({ target: { name, value } }) {
     setFormData((formData) => ({
@@ -256,4 +215,4 @@ function FurtherCandidateAssessment() {
   );
 }
 
-export default FurtherCandidateAssessment;
+export default FurtherCandidateAssessment1;

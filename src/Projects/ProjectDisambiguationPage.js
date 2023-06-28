@@ -1,11 +1,13 @@
 import { Link, Route, Switch } from "react-router-dom";
-import FurtherCandidateAssessment from "./Further Candidate Assessment/FurtherCandidateAssessment";
+import FurtherCandidateAssessment1 from "./Further Candidate Assessment/FurtherCandidateAssessment1";
+import FurtherCandidateAssessment2 from "./Further Candidate Assessment/FurtherCandidateAssessment2";
 
 function ProjectDisambiguationPage() {
   return (
     <div>
       <Switch>
-        <Route path="/Projects/CA1"><FurtherCandidateAssessment/></Route>
+        <Route path="/Projects/CA1"><FurtherCandidateAssessment1/></Route>
+        <Route path="/Projects/CA2"><FurtherCandidateAssessment2/></Route>
         <Route exact={true} path="/Projects">
           <h1>Project List</h1>
           <br />
@@ -17,6 +19,9 @@ function ProjectDisambiguationPage() {
             </li>
             <li>
               <Link to="/Projects/CA1"> Candidate Assessment 1</Link>
+            </li>
+            <li>
+              <Link to="/Projects/CA2"> Candidate Assessment 2</Link>
             </li>
           </ul>
         </Route>
