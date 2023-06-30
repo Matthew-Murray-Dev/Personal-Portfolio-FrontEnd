@@ -38,6 +38,7 @@ async function fetchJson(url, options) {
     if (payload.error) {
       return Promise.reject({ message: payload.error });
     }
+    
     return payload.data;
   } catch (error) {
     if (error.name !== "AbortError") {
@@ -66,6 +67,17 @@ export async function listTitanDef(signal) {
   };
   return await fetchJson(url, options);
 }
+
+export async function listSqlOutput(signal) {
+  const url = `${API_BASE_URL}/Projects/CA2`;
+  const options = {
+    headers,
+    signal,
+  };
+  return await fetchJson(url, options);
+}
+
+
 
 export async function updateTitanDef(updatedTitanDef, id, signal) {
   const url = `${API_BASE_URL}/HW/TitanDef/${updatedTitanDef.titanDef_id}`;

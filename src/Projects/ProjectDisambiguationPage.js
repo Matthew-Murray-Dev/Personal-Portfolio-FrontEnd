@@ -1,6 +1,6 @@
 import { Link, Route, Switch } from "react-router-dom";
 import FurtherCandidateAssessment1 from "./Further Candidate Assessment/FurtherCandidateAssessment1";
-import FurtherCandidateAssessment2 from "./Further Candidate Assessment/FurtherCandidateAssessment2";
+import FurtherCandidateAssessment2 from "./Further Candidate Assessment/Assessment2/FurtherCandidateAssessment2";
 
 function ProjectDisambiguationPage() {
   return (

@@ -12,13 +12,11 @@ function FurtherCandidateAssessment1() {
   });
   const initialFormState = { name: "", email: "", phone: "" };
   const [formData, setFormData] = useState(initialFormState);
- 
+
   let showOne = updateValue.updateValueOne ? "" : "none";
   let showTwo = updateValue.updateValueTwo ? "" : "none";
   let showThree = updateValue.updateValueThree ? "" : "none";
   let showFour = updateValue.updateValueFour ? "" : "none";
-
- 
 
   function changeHandler({ target: { name, value } }) {
     setFormData((formData) => ({
@@ -30,7 +28,11 @@ function FurtherCandidateAssessment1() {
   return (
     <div>
       <div>
+      <h1 style={{textAlign:"center"}}>Further Candidate Assessment One</h1>
+        <br />
+
         <div className="row mb-3">
+          
           <h2>Task One:</h2>
         </div>
         <div className="row mb-3">
@@ -50,7 +52,8 @@ function FurtherCandidateAssessment1() {
                 event should be sent into Google Tag Manager. Configure Google
                 Tag Manager to send the trigger into Google Analytics. Create
                 and configure a goal in Google Analytics so you can display said
-                event as a conversion. Use <a href="https://loom.com">loom.com</a> to take a video of the
+                event as a conversion. Use{" "}
+                <a href="https://loom.com">loom.com</a> to take a video of the
                 process from end to end with the converstion showing up in
                 Google Analytics
               </p>
@@ -93,7 +96,12 @@ function FurtherCandidateAssessment1() {
             </div>
           </div>
           <div className="col col-5" style={{ margin: "auto" }}>
-            <form id="myForm" action="https://hooks.zapier.com/hooks/catch/15728688/3hvmdzf/" className="mb-4" type="POST">
+            <form
+              id="myForm"
+              action="https://hooks.zapier.com/hooks/catch/15728688/3hvmdzf/"
+              className="mb-4"
+              type="POST"
+            >
               <div className="row form-group">
                 <label className="form-label" htmlFor="defLine">
                   Name
